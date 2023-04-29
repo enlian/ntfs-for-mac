@@ -1,3 +1,5 @@
+![Image text](https://github.com/enlian/ntfs-for-mac/blob/main/image/logo.png)
+
 这个项目旨在帮助你用简单的几句命令行，实现在mac系统读取写入NTFS移动硬盘或者U盘的功能。
 配置完成后，只需要点击挂载或者卸载移动硬盘，不再需要使用命令行。
 目前已经支持到最新的苹果macos 13.x系统和m1、m2芯片。
