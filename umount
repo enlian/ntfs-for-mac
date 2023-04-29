@@ -1,0 +1,4 @@
+#！ /bin/bash
+
+sudo umount /dev/disk4s1
+sudo exit
