@@ -15,7 +15,8 @@ homebrew、macfuse、ntfs-3g-mac
 
 2.关闭电脑安全性设置
 这是使用系统扩展插件的常规操作。
-2.1 “通用”中“隐私与安全性”，允许任何来源，可直接终端 sudo spctl --master-disable
+2.1 “通用”中“隐私与安全性”，允许任何来源，可直接终端 
+sudo spctl --master-disable
 2.2 关闭SIP，输入后 csrutil disable重启
 2.3 关机后长按开机键，进入“恢复”环境，在“实用工具”->“启动安全性实用工具”降低安全性的选项全都都勾上（出现不能更改安全性设置，关机盒盖，30秒后再操作一遍即可）
 
@@ -31,7 +32,7 @@ brew install ntfs-3g-mac
 diskutil list
 
 找到你的移动硬盘的名字，标红的就是名字
-[](https://github.com/enlian/ntfs-for-mac/blob/main/image/list.png)
+![Image text](https://github.com/enlian/ntfs-for-mac/blob/main/image/list.png)
 
 5.挂载硬盘
 5.1挂载前先卸载（防止报错）
@@ -73,32 +74,33 @@ homebrew, macfuse, ntfs-3g-mac
 Instructions:
 
 1. Install homebrew
-   ⌘+space, enter the terminal, copy the following code and paste it to the terminal, and restart the terminal after the installation is complete. (Package Manager under macOS)
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+⌘+space, enter the terminal, copy the following code and paste it to the terminal, and restart the terminal after the installation is complete. (Package Manager under macOS)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 2. Turn off computer security settings
-   This is normal operation with system extensions.
-   2.1 "Privacy and Security" in "General", allowing any source, you can directly terminal sudo spctl --master-disable
-   2.2 Close SIP, enter csrutil disable and restart
-   2.3 After shutting down, press and hold the power button to enter the "Recovery" environment, and tick all the options to reduce security in "Utilities" -> "Start Security Utility" (the security settings cannot be changed, shut down the box cover, 30 You can do it again in seconds)
+This is normal operation with system extensions.
+2.1 "Privacy and Security" in "General", allowing any source, you can directly terminal 
+sudo spctl --master-disable
+2.2 Close SIP, enter csrutil disable and restart
+2.3 After shutting down, press and hold the power button to enter the "Recovery" environment, and tick all the options to reduce security in "Utilities" -> "Start Security Utility" (the security settings cannot be changed, shut down the box cover, 30 You can do it again in seconds)
 
 3. Install fuse
-   Command Line 
-   brew tap gromgit/homebrew-fuse
-   install macfuse
-   brew install --cask macfuse
-   Then install ntfs-3g-mac
-   brew install ntfs-3g-mac
+Command Line 
+brew tap gromgit/homebrew-fuse
+install macfuse
+brew install --cask macfuse
+Then install ntfs-3g-mac
+brew install ntfs-3g-mac
 
 4. Check the mount information
-   diskutil list
+diskutil list
 
 Find the name of your mobile hard drive, the red one is the name
-[](https://github.com/enlian/ntfs-for-mac/blob/main/image/list.png)
+![Image text](https://github.com/enlian/ntfs-for-mac/blob/main/image/list.png)
 
 5. Mount the hard disk
-   5.1 Uninstall before mounting (to prevent error reporting)
-   sudo umount /dev/disk4s1
+5.1 Uninstall before mounting (to prevent error reporting)
+sudo umount /dev/disk4s1
 
 disk4s1 is the name of your hard disk, everyone may be different
 
