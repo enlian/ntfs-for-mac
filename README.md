@@ -20,6 +20,7 @@ homebrew、macfuse、ntfs-3g-mac
 
 # 1.安装homebrew
 ⌘+space输入终端复制以下代码粘贴至终端，安装完成重启终端。（macOS下包管理器）
+
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
 # 2.关闭电脑安全性设置
@@ -67,7 +68,7 @@ disk4s1就是你的硬盘名字，每个人可能不一样
     #！ /bin/bash
     sudo umount /dev/disk4s1
     sudo /System/Volumes/Data/opt/homebrew/bin/ntfs-3g /dev/disk4s1 /Volumes/NTFS -olocal -oallow_other -o auto_xattr
-    sudo exit``
+    sudo exit
 
 ##### 卸载：
 
@@ -95,6 +96,7 @@ Instructions:
 
 # 1. Install homebrew
 ⌘+space, enter the terminal, copy the following code and paste it to the terminal, and restart the terminal after the installation is complete. (Package Manager under macOS)
+
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
 # 2. Turn off computer security settings
@@ -151,4 +153,4 @@ I made the mount and uninstall commands into executable files, you can copy them
 
     #! /bin/bash
     sudo umount /dev/disk4s1
-    sudo exit`
+    sudo exit
