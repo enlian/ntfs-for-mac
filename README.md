@@ -31,7 +31,7 @@ brew install ntfs-3g-mac
 diskutil list
 
 找到你的移动硬盘的名字，标红的就是名字
-![](/Users/Wu/Code/ntfs-for-mac/image/list.png)
+[](https://github.com/enlian/ntfs-for-mac/blob/main/image/list.png)
 
 5.挂载硬盘
 5.1挂载前先卸载（防止报错）
@@ -59,7 +59,7 @@ sudo exit
 sudo umount /dev/disk4s1
 sudo exit
 
-
+---
 
 This project aims to help you use a few simple command lines to realize the function of reading and writing NTFS mobile hard disk or U disk on mac system.
 After the configuration is complete, you only need to click to mount or unmount the mobile hard disk, and you no longer need to use the command line.
@@ -94,7 +94,7 @@ Instructions:
    diskutil list
 
 Find the name of your mobile hard drive, the red one is the name
-![](/Users/Wu/Code/ntfs-for-mac/image/list.png)
+[](https://github.com/enlian/ntfs-for-mac/blob/main/image/list.png)
 
 5. Mount the hard disk
    5.1 Uninstall before mounting (to prevent error reporting)
