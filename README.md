@@ -3,20 +3,28 @@ Author: Kevin Stark
 Date: 2024/06/12  
 Version: 1.0  
 
-这个项目是基于[原项目](https://github.com/enlian/ntfs-for-mac)的一个fork，增加了用PyQt5写的GUI。  
+
+## 说明
+这个项目是基于[原项目](https://github.com/enlian/ntfs-for-mac)的一个fork。  
+* 原项目没有交互界面，为人机交互考虑，增加了用PyQt5写的GUI。  
+* 原项目需要手动进入bash，在命令行或文本编辑器里修改磁盘标识符，不灵活，于是增加了查看磁盘列表、输入磁盘标识符的功能。  
+
 ![GUI](image/gui.png)
-一切使用前提是按照原本的要求把依赖都装好，查看下面正文以得知要求  
 GUI使用方法：
 * 方案一：确认挂载后在终端输入计算机密码。
 * 方案二：用QProcess实现，和方案一效果没区别。
 * 方案三：在终端中运行`sudo python3 ntfs_mounter.py`，只需要一开始在终端输入一次密码就行，不用在程序运转时候输入密码了。
-* 默认是方案一。如需修改请自行在`ntfs_mounter.py`的mountNTFSDisk内找到相关代码，注释和解除注释。
+* 默认是方案一。如需修改请自行在`ntfs_mounter.py`的mountNTFSDisk内找到相关代码，注释和解除注释。  
 
-也用Pyinstaller创建了可执行程序，直接双击就可以用。不需要安装python的pyqt5包了（但是依然需要有macfuse，ntfs-3g-mac这些）
-路径：ntfs-mounter/dist/ntfs_mounter/ntfs_mounter
+也用Pyinstaller创建了可执行程序，直接双击就可以用。不需要安装python的pyqt5包。  
+
+路径：ntfs-mounter/dist/ntfs_mounter/ntfs_mounter  
+
+
+注意，一切使用前提是按照要求把相关依赖装好。以下为原项目介绍：
 
 ------------
-以下为原项目介绍：
+
 
 ![Image text](https://github.com/enlian/ntfs-for-mac/blob/main/image/logo.png)
 
