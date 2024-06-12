@@ -10,18 +10,24 @@ Version: 1.0
 * 原项目需要手动进入bash，在命令行或文本编辑器里修改磁盘标识符，不灵活，于是增加了查看磁盘列表、输入磁盘标识符的功能。  
 
 ![GUI](image/gui.png)
-GUI使用方法：
-* 方案一：确认挂载后在终端输入计算机密码。
+## 使用方法
+首先要把相关依赖和设置配好，
+1. `homebrew、macfuse、ntfs-3g-mac`，详情看下面正文
+2. 系统安全性设置，详情看下面正文
+3. Python包PyQt5 可以通过`pip install PyQt5`获得。  
+
+GUI有三种使用方案。
+* 方案一：在终端运行`python3 ntfs_mounter.py`，在GUI里确认挂载后在终端输入计算机密码。
 * 方案二：用QProcess实现，和方案一效果没区别。
-* 方案三：在终端中运行`sudo python3 ntfs_mounter.py`，只需要一开始在终端输入一次密码就行，不用在程序运转时候输入密码了。
+* 方案三：在终端中运行`sudo python3 ntfs_mounter.py`，只需要一开始在终端输入密码就行，不用在程序运转时输入了。
 * 默认是方案一。如需修改请自行在`ntfs_mounter.py`的mountNTFSDisk内找到相关代码，注释和解除注释。  
 
-也用Pyinstaller创建了可执行程序，直接双击就可以用。不需要安装python的pyqt5包。  
+也用Pyinstaller创建了可执行程序，直接双击就可以用。不需要安装Python的PyQt5包。  
 
 路径：ntfs-mounter/dist/ntfs_mounter/ntfs_mounter  
 
 
-注意，一切使用前提是按照要求把相关依赖装好。以下为原项目介绍：
+注意，一切使用前提是把相关依赖和设置配好。以下为原项目介绍：
 
 ------------
 
