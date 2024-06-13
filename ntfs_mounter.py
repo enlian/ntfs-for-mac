@@ -11,6 +11,7 @@ import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QPushButton, QLineEdit, QLabel, QWidget, QMessageBox
 from PyQt5.QtCore import QProcess, pyqtSlot
 import subprocess
+import re
 
 class NTFSMounter(QMainWindow):
     def __init__(self):
@@ -20,7 +21,7 @@ class NTFSMounter(QMainWindow):
 
     def initUI(self):
         self.setWindowTitle('NTFS Mounter')
-        self.setGeometry(100, 100, 400, 300)
+        self.setGeometry(100, 100, 500, 400) # 分别是窗口左上角的x坐标，y坐标，窗口宽度，高度
 
         layout = QVBoxLayout()
 
@@ -54,7 +55,7 @@ class NTFSMounter(QMainWindow):
         output = subprocess.check_output(['diskutil', 'list']).decode('utf-8')
 
         # 将输出添加到列表中
-        self.status_label.setText(output)
+        self.status_label.setText('通过在终端输入diskutil list获取到的磁盘列表如下:\n' + output)
 
     @pyqtSlot()
     def mountNTFSDisk(self):
@@ -88,7 +89,7 @@ class NTFSMounter(QMainWindow):
                 
                 self.status_label.setText(f'磁盘{disk_identifier}已成功挂载，可以关闭窗口。')
             except subprocess.CalledProcessError as e:
-                self.status_label.setText(f'挂载失败: {e}')
+                self.status_label.setText(f'挂载失败:\n {e}')
         else:
             self.status_label.setText('已取消')
 
