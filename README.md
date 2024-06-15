@@ -16,18 +16,26 @@ Version: 1.0
 2. 系统安全性设置，详情看下面正文
 3. Python包PyQt5 可以通过`pip install PyQt5`获得。  
 
+
+
 GUI有三种使用方案。
+
 * 方案一：在终端运行`python3 ntfs_mounter.py`，在GUI里确认挂载后在终端输入计算机密码。
 * 方案二：用QProcess实现，和方案一效果没区别。
 * 方案三：在终端中运行`sudo python3 ntfs_mounter.py`，只需要一开始在终端输入密码就行，不用在程序运转时输入了。
 * 默认是方案一。如需修改请自行在`ntfs_mounter.py`的mountNTFSDisk内找到相关代码，注释和解除注释。  
 
+GUI路径：ntfs-mounter/ntfs_mounter.py  
+
 也用Pyinstaller创建了可执行程序，直接双击就可以用。不需要安装Python的PyQt5包。  
 
-路径：ntfs-mounter/dist/ntfs_mounter/ntfs_mounter  
+可执行程序路径：ntfs-mounter/dist/ntfs_mounter/ntfs_mounter  
 
 
-注意，一切使用前提是把相关依赖和设置配好。以下为原项目介绍：
+
+注意，一切使用前提是把相关依赖和设置配好。  
+
+以下为原项目介绍：
 
 ------------
 
