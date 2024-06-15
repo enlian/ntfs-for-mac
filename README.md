@@ -27,7 +27,7 @@ GUI有三种使用方案。
 
 GUI路径：ntfs-mounter/ntfs_mounter.py  
 
-也用Pyinstaller创建了可执行程序，直接双击就可以用。不需要安装Python的PyQt5包。  
+也用Pyinstaller创建了可执行程序，解压`dist.tar.gz`后进入路径，双击ntfs_mounter就可以用，不需要安装Python的PyQt5包。 
 
 可执行程序路径：ntfs-mounter/dist/ntfs_mounter/ntfs_mounter  
 

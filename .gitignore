@@ -4,3 +4,4 @@
 # PyInstaller build files
 build/
 ntfs_mounter.spec
+dist/
