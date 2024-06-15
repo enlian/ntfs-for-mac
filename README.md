@@ -1,7 +1,7 @@
 # NTFS Mounter 
 Author: Kevin Stark  
-Date: 2024/06/12  
-Version: 1.0  
+Date: 2024/06/15  
+Version: 1.1  
 
 
 ## 说明
