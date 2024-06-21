@@ -1,0 +1,7 @@
+# OS X specific files
+.DS_Store
+
+# PyInstaller build files
+build/
+ntfs_mounter.spec
+dist/

@@ -1,6 +1,48 @@
+# NTFS Mounter 
+Author: Kevin Stark  
+Date: 2024/06/15  
+Version: 1.1  
+
+
+## 说明
+这个项目是基于[原项目](https://github.com/enlian/ntfs-for-mac)的一个fork。  
+* 原项目没有交互界面，为人机交互考虑，增加了用PyQt5写的GUI。  
+* 原项目需要手动进入bash，在命令行或文本编辑器里修改磁盘标识符，不灵活，于是增加了查看磁盘列表、输入磁盘标识符的功能。  
+
+![GUI](image/gui.png)
+## 使用方法
+首先要把相关依赖和设置配好，
+1. `homebrew、macfuse、ntfs-3g-mac`，详情看下面正文
+2. 系统安全性设置，详情看下面正文
+3. Python包PyQt5 可以通过`pip install PyQt5`获得。  
+
+
+
+GUI有三种使用方案。
+
+* 方案一：在终端运行`python3 ntfs_mounter.py`，在GUI里确认挂载后在终端输入计算机密码。
+* 方案二：用QProcess实现，和方案一效果没区别。
+* 方案三：在终端中运行`sudo python3 ntfs_mounter.py`，只需要一开始在终端输入密码就行，不用在程序运转时输入了。
+* 默认是方案一。如需修改请自行在`ntfs_mounter.py`的mountNTFSDisk内找到相关代码，注释和解除注释。  
+
+GUI路径：ntfs-mounter/ntfs_mounter.py  
+
+也用Pyinstaller创建了可执行程序，解压`dist.tar.gz`后进入路径，双击ntfs_mounter就可以用，不需要安装Python的PyQt5包。 
+
+可执行程序路径：ntfs-mounter/dist/ntfs_mounter/ntfs_mounter  
+
+
+
+注意，一切使用前提是把相关依赖和设置配好。  
+
+以下为原项目介绍：
+
+------------
+
+
 ![Image text](https://github.com/enlian/ntfs-for-mac/blob/main/image/logo.png)
 
-这个项目旨在帮助你用简单的几句命令行，实现在mac系统读取写入NTFS移动硬盘或者U盘的功能。
+旨在帮助你用简单的几句命令行，实现在mac系统读取写入NTFS移动硬盘或者U盘的功能。
 
 配置完成后，只需要点击挂载或者卸载移动硬盘，不再需要使用命令行。
 
