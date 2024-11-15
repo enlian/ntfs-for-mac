@@ -5,9 +5,10 @@ import { useRouter } from 'next/navigation';
 
 type PaginationProps = {
   initialPage: number;
+  keyword:string
 };
 
-export default function Pagination({ initialPage }: PaginationProps) {
+export default function Pagination({ initialPage,keyword }: PaginationProps) {
   const [currentPage, setCurrentPage] = useState(initialPage);
   const router = useRouter();
 
@@ -20,7 +21,7 @@ export default function Pagination({ initialPage }: PaginationProps) {
 
   const handlePageChange = (page: number) => {
     // 更新 URL 并刷新页面
-    router.push(`/?page=${page}`);
+    router.push(`/${keyword}?page=${page}`);
     setCurrentPage(page);
   };
 
