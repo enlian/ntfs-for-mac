@@ -14,12 +14,11 @@ export async function GET(req: Request) {
   const page = searchParams.get('page') || '1';
 
   const apiKey = process.env.NEWS_API_KEY;
-  const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&pageSize=10&page=${page}&apiKey=${apiKey}`;
+  const url = `https://newsapi.org/v2/top-headlines?&category=${category}&pageSize=10&page=${page}&apiKey=${apiKey}`;
 
   try {
     const response = await fetch(url);
     const data: NewsAPIResponse = await response.json();
-    console.log(data);
     return NextResponse.json(data);
   } catch (error) {
     return NextResponse.json({ error: 'Failed to fetch news data' }, { status: 500 });

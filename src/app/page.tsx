@@ -1,5 +1,5 @@
-import NewsList from './components/NewsList';
-import Pagination from './components/Pagination';
+import NewsList from "./components/NewsList";
+import Pagination from "./components/Pagination";
 
 type NewsArticle = {
   title: string;
@@ -7,8 +7,20 @@ type NewsArticle = {
   description: string;
 };
 
-export default async function Home() {
-  const res = await fetch(`http://localhost:3000/api/news?category=general&page=1`, { cache: 'no-store' });
+type HomeProps = {
+  searchParams: {
+    page?: string;
+  };
+};
+
+export default async function Home({ searchParams }: HomeProps) {
+  const { page } = await searchParams;
+
+  const currentPage = parseInt(page || "1", 10);
+  const res = await fetch(
+    `http://localhost:3000/api/news?category=general&page=${currentPage}`,
+    { cache: "no-store" }
+  );
   const data = await res.json();
   const news: NewsArticle[] = data.articles;
 
@@ -17,7 +29,7 @@ export default async function Home() {
       <h1>Latest News</h1>
       <NewsList news={news} />
       {/* 把分页逻辑交给客户端组件处理 */}
-      <Pagination initialPage={1} />
+      <Pagination initialPage={currentPage} />
     </main>
   );
 }
