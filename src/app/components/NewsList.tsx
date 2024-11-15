@@ -10,16 +10,14 @@ type NewsListProps = {
     if (!news || news.length === 0) return <p>No news available</p>;
   
     return (
-      <ul>
+      <div>
         {news.map((article, index) => (
-          <li key={index}>
-            <a href={article.url} target="_blank" rel="noopener noreferrer">
-              <h3>{article.title}</h3>
-              <p>{article.description}</p>
-            </a>
-          </li>
+          <div key={index}>
+            <h3>{article.title}</h3>
+            <p>{article.description}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     );
   }
   

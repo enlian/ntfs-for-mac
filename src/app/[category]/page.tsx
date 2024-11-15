@@ -13,7 +13,7 @@ type CategoryPageProps = {
 };
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
-  const { category } = params;
+  const { category } = await params;
   const res = await fetch(`http://localhost:3000/api/news?category=${category}`, { cache: 'no-store' });
   const data = await res.json();
 
